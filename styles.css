@@ -1,0 +1,15 @@
+div {
+  border: solid 1px;
+  flex: 1;
+}
+
+.box {
+  height: 800px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.div {
+  display: flex;
+}
