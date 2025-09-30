@@ -16,7 +16,6 @@ function createGrid() {
       const subDiv = document.createElement("div");
       subDiv.classList.add("subDiv");
       div.appendChild(subDiv);
-      subDiv.textContent = j + 1;
     }
   }
 }
@@ -48,7 +47,6 @@ function customGrid() {
       const subDiv = document.createElement("div");
       subDiv.classList.add("subDiv");
       div.appendChild(subDiv);
-      subDiv.textContent = j + 1;
     }
   }
 }
