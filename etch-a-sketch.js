@@ -27,14 +27,16 @@ function promptGrid() {
   let gridSize = Number(
     prompt("Which size do you prefer? Enter a value between 10 to 100")
   );
-  while (gridSize < 10 || gridSize > 100 || !Number.isInteger(gridSize)) {}
-  gridSize = Number(prompt("Please enter a valid size: 10-100"));
-  //issue when user cancels prompt, doesn't exit loop
-  return gridSize;
+  while (gridSize < 10 || gridSize > 100 || !Number.isInteger(gridSize)) {
+    gridSize = Number(prompt("Please enter a valid size: 10-100"));
+    //issue when user cancels prompt, doesn't exit loop
+    return gridSize;
+  }
 }
 
 //runs when user clicks on gridButton
 function customGrid(userPrompt) {
+  box.replaceChildren(); //clears the box
   for (let i = 0; i < userPrompt; i++) {
     const div = document.createElement("div");
     div.classList.add("div"); //used for display flex
@@ -51,7 +53,7 @@ function customGrid(userPrompt) {
 
 gridButton.addEventListener("click", () => {
   promptGrid();
-  // customGrid();
+  customGrid();
 });
 
 //selector after creating grid
