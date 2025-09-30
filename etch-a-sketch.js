@@ -29,16 +29,36 @@ function promptGrid() {
   );
   while (gridSize < 10 || gridSize > 100 || !Number.isInteger(gridSize)) {}
   gridSize = Number(prompt("Please enter a valid size: 10-100"));
+  //issue when user cancels prompt, doesn't exit loop
+  return gridSize;
+}
+
+//runs when user clicks on gridButton
+function customGrid(userPrompt) {
+  for (let i = 0; i < userPrompt; i++) {
+    const div = document.createElement("div");
+    div.classList.add("div"); //used for display flex
+    box.appendChild(div);
+    for (let j = 0; j < userPrompt; j++) {
+      //second loop to create 16 div per row
+      const subDiv = document.createElement("div");
+      subDiv.classList.add("subDiv");
+      div.appendChild(subDiv);
+      subDiv.textContent = j + 1;
+    }
+  }
 }
 
 gridButton.addEventListener("click", () => {
   promptGrid();
+  // customGrid();
 });
 
-//selector after creater grid
-//have to call the function before, otherwise nodeList is empty
+//selector after creating grid
+//have to call createGrid() before, otherwise nodeList is empty
 const subDiv = document.querySelectorAll(".subDiv");
 
+//on hover:: changes color of subDiv
 subDiv.forEach((subDiv) => {
   subDiv.addEventListener("mouseover", () => {
     subDiv.style.backgroundColor = "antiquewhite";
