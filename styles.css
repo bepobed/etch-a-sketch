@@ -4,8 +4,8 @@ div {
 }
 
 .box {
-  height: 800px;
-  width: 800px;
+  height: 500px;
+  width: 500px;
   display: flex;
   flex-direction: column;
 }
