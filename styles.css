@@ -2,12 +2,44 @@ div {
   flex: 1;
 }
 
+body {
+  flex-direction: column;
+  background-color: #f3ebcf;
+}
+
 .box {
   border: solid;
-  height: 500px;
-  width: 500px;
+  border-radius: 4px;
+  height: 650px;
+  width: 650px;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  background-color: white;
+}
+
+button {
+  display: block;
+  margin: 40px auto 20px;
+  background: #fbca1f;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
 
 .div {
