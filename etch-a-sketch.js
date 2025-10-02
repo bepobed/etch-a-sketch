@@ -53,12 +53,19 @@ function customGrid() {
   addCellColor();
 }
 
+function randomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 //on hover:: changes color of subDiv
 function addCellColor() {
   const subDiv = document.querySelectorAll(".subDiv");
   subDiv.forEach((subDiv) => {
     subDiv.addEventListener("mouseover", () => {
-      subDiv.style.backgroundColor = "black";
+      subDiv.style.backgroundColor = randomColor();
     });
 
     // subDiv.addEventListener("mouseout", () => {
