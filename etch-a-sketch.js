@@ -54,10 +54,10 @@ function customGrid() {
 }
 
 function randomColor() {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-  return `rgb(${r}, ${g}, ${b})`;
+  const hue = Math.floor(Math.random() * 360); // any hue
+  const saturation = Math.floor(Math.random() * 21) + 50; // 50–70%
+  const lightness = Math.floor(Math.random() * 11) + 80; // 80–90%
+  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
 //on hover:: changes color of subDiv
