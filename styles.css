@@ -1,9 +1,9 @@
 div {
-  border: solid 1px;
   flex: 1;
 }
 
 .box {
+  border: solid;
   height: 500px;
   width: 500px;
   display: flex;
