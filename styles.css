@@ -19,8 +19,7 @@ body {
 }
 
 button {
-  display: block;
-  margin: 40px auto 20px;
+  margin: 40px 0 20px 20px;
   background: #f6d767;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
   padding: 0.6em 1.3em;
@@ -30,6 +29,12 @@ button {
   border-radius: 0.4em;
   box-shadow: 0.1em 0.1em;
   cursor: pointer;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button:hover {

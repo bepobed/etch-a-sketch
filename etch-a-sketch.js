@@ -1,5 +1,6 @@
 const body = document.querySelector("body");
 const gridButton = document.getElementById("gridButton");
+const resetButton = document.getElementById("resetButton");
 
 //create a box for the grid
 const box = document.createElement("div");
@@ -49,7 +50,6 @@ function customGrid() {
       div.appendChild(subDiv);
     }
   }
-  const subDiv = document.querySelectorAll(".subDiv");
   addCellColor();
 }
 
@@ -70,12 +70,20 @@ function addCellColor() {
         subDiv.style.backgroundColor = randomColor();
       });
     }
-
     // subDiv.addEventListener("mouseout", () => {
     //   subDiv.style.backgroundColor = ""; // clears inline style
     // });
   );
 }
+
+function resetColors() {
+  const subDiv = document.querySelectorAll(".subDiv");
+  subDiv.forEach((subDiv) => (subDiv.style.backgroundColor = ""));
+}
+
+resetButton.addEventListener("click", () => {
+  resetColors();
+});
 
 gridButton.addEventListener("click", () => {
   customGrid();
