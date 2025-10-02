@@ -63,16 +63,20 @@ function randomColor() {
 //on hover:: changes color of subDiv
 function addCellColor() {
   const subDiv = document.querySelectorAll(".subDiv");
-  subDiv.forEach((subDiv) => {
-    subDiv.addEventListener("mouseover", () => {
-      subDiv.style.backgroundColor = randomColor();
-    });
+  subDiv.forEach(
+    (subDiv) => {
+      subDiv.addEventListener("mouseover", () => {
+        if (subDiv.style.backgroundColor) return;
+        subDiv.style.backgroundColor = randomColor();
+      });
+    }
 
     // subDiv.addEventListener("mouseout", () => {
     //   subDiv.style.backgroundColor = ""; // clears inline style
     // });
-  });
+  );
 }
+
 gridButton.addEventListener("click", () => {
   customGrid();
 });
